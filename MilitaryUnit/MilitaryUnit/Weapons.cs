@@ -52,10 +52,9 @@ namespace MilitaryUnitWeapons
         public override double Attack()
         {
             Random r = new Random();
-
+            count--;
             if (r.NextDouble() <= accuracy && count > 0)
             {
-                count--;
                 return power;
             }
             else if (count == 0)
