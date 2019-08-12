@@ -30,25 +30,23 @@ namespace MilitaryUnits
         }
         public double Attack()
         {
-            if (p.InRange(distance))
-            {
-                attack = p.Attack();
-                return attack;
-            }
-            return 0;
+            myTurn = Turn();
+            attack = p.Attack();
+            return attack;
         }
 
     }
     public class Legionnaire : Unit
     {
         protected Equip head = new Equip(Slot.Helm);
-        protected BodyArmor body = new BodyArmor(Body.Scalemail);
+        protected BodyArmor body;
         protected Equip arms = new Equip(Slot.Arms);
         protected Equip legs = new Equip(Slot.Legs);
 
         public Legionnaire() : base()
         {
             name = "Legionnaire";
+            body = new BodyArmor(Body.Ringmail);
             Defense();
             speed = 1.0;
             attack = 1.0;
@@ -79,24 +77,20 @@ namespace MilitaryUnits
         }
         public double Attack()
         {
-            if (s.InRange(distance))
-            {
-                attack = s.Attack();
-                return attack;
-            }
-            return 0;
+            myTurn = Turn();
+            return attack;
         }
     }
     public class Principes : Legionnaire
     {
         Gladius g;
-        Body b;
         public Principes() : base()
         {
-            b = Body.Scalemail;
+            body = new BodyArmor(Body.Scalemail);
             g = new Gladius();
             name = "Principes";
             Defense();
+            armorLevel += g.Armor();
             attack = g.Attack();
             speed = 1.25;
             healthPoints = 15.0;
@@ -107,24 +101,20 @@ namespace MilitaryUnits
         }
         public double Attack()
         {
-            if (g.InRange(distance))
-            {
-                attack = g.Attack();
-                return attack;
-            }
-            return 0;
+            myTurn = Turn();
+            return attack;
         }
     }
     public class Triarii : Legionnaire
     {
         Gladius g;
-        Body b;
         public Triarii() : base()
         {
-            b = Body.Plate;
+            body = new BodyArmor(Body.Plate);
             g = new Gladius();
-            name = "Principes";
+            name = "Triarii";
             Defense();
+            armorLevel += g.Armor();
             attack = g.Attack();
             speed = 1.5;
             healthPoints = 20.0;
@@ -135,12 +125,8 @@ namespace MilitaryUnits
         }
         public double Attack()
         {
-            if (g.InRange(distance))
-            {
-                attack = g.Attack();
-                return attack;
-            }
-            return 0;
+            myTurn = Turn();
+            return attack;
         }
     }
 }

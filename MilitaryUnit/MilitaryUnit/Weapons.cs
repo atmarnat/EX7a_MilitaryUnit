@@ -13,26 +13,10 @@ namespace MilitaryUnitWeapons
             power = 1.0;
             reach = 1.0;
             armor = 5.0;
-            range = false;
         }
         public override double Attack()
         {
-            if (range == true)
-            {
-                return power;
-            }
-            Console.WriteLine("You are out of range.");
-            return 0;
-        }
-        public override bool InRange(double distance)
-        {
-            if (distance <= reach)
-            {
-                range = true;
-                return range;
-            }
-            range = false;
-            return range;
+            return power;
         }
         public double Armor()
         {
@@ -46,26 +30,10 @@ namespace MilitaryUnitWeapons
         {
             power = 2.0;
             reach = 3.0;
-            range = false;
         }
         public override double Attack()
-        {
-            if (range == true)
-            {
-                return power;
-            }
-            Console.WriteLine("You are out of range.");
-            return 0;
-        }
-        public override bool InRange(double distance)
-        {
-            if (distance <= reach)
-            {
-                range = true;
-                return range;
-            }
-            range = false;
-            return range;
+        { 
+            return power;
         }
     }
 
@@ -80,7 +48,6 @@ namespace MilitaryUnitWeapons
             reach = 25.0;
             count = 6;
             accuracy = 0.8;
-            range = false;
         }
         public override double Attack()
         {
@@ -96,16 +63,6 @@ namespace MilitaryUnitWeapons
                 Console.WriteLine("You have no more Pilums.");
             }
             return 0;
-        }
-        public override bool InRange(double distance)
-        {
-            if (distance <= reach)
-            {
-                range = true;
-                return range;
-            }
-            range = false;
-            return range;
         }
     }
 }

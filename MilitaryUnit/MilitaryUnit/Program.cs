@@ -9,16 +9,17 @@ namespace MilitaryUnit
         {
             Console.WriteLine("We are the Roman Legion!");
             Velites v1 = new Velites();
-            //v1.Distance(10);
-            //v1.Attack();
-
+            Hastati h1 = new Hastati();
             Principes p1 = new Principes();
-           // p1.Distance(1);
-           // p1.Attack();
+            Triarii t1 = new Triarii();
 
-            //v1.About();
+            v1.About();
             Console.WriteLine("");
-            //p1.About();
+            h1.About();
+            Console.WriteLine();
+            p1.About();
+            Console.WriteLine("");
+            t1.About();
         }
     }
 }

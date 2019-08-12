@@ -10,13 +10,11 @@ namespace MilitaryUnitParentClasses
     {
         protected double power;
         protected double reach;
-        protected bool range;
 
         public WeaponStats()
         {
             power = 0.0;
             reach = 0.0;
-            range = false;
         }
 
         virtual public double Attack()
@@ -24,11 +22,6 @@ namespace MilitaryUnitParentClasses
             return power;
         }
 
-        virtual public bool InRange(double distance)
-        {
-            range = true;
-            return range;
-        }
     }
     public class Armor
     {
@@ -50,7 +43,6 @@ namespace MilitaryUnitParentClasses
         protected double myTurn;
         protected double attack;
         protected double healthPoints;
-        protected double distance;
 
         public Unit()
         {
@@ -59,13 +51,7 @@ namespace MilitaryUnitParentClasses
             speed = 0.1;
             myTurn = 0.0;
             attack = 0.0;
-            healthPoints = 1.0;
-            distance = Distance();
-        }
-        public double Distance(double d = 10)
-        {
-            return d;
-        }
+            healthPoints = 1.0;        }
         public bool IsDead()
         {
             if (healthPoints <= 0.0)
