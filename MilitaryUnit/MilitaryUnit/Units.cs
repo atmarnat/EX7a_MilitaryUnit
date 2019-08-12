@@ -16,8 +16,7 @@ namespace MilitaryUnits
             name = "Velites";
             armorLevel = 5.0;
             attack = p.Attack();
-            speed = 0.8;
-            myTurn = 0.0;
+            speed = 3;
             healthPoints = 8;
         }
         public override void Description()
@@ -28,11 +27,13 @@ namespace MilitaryUnits
         {
             armorLevel = 5.0;
         }
-        public double Attack()
+        public double Attack(int count)
         {
-            myTurn = Turn();
-            attack = p.Attack();
-            return attack;
+            if (count % speed == 0)
+            {
+                return attack;
+            }
+            return 0;
         }
 
     }
@@ -48,7 +49,7 @@ namespace MilitaryUnits
             name = "Legionnaire";
             body = new BodyArmor(Body.Ringmail);
             Defense();
-            speed = 1.0;
+            speed = 2;
             attack = 1.0;
             healthPoints = 10;
         }
@@ -68,6 +69,7 @@ namespace MilitaryUnits
         {
             s = new Spear();
             name = "Hastati";
+            speed = 2;
             Defense();
             attack = s.Attack();
         }
@@ -75,10 +77,13 @@ namespace MilitaryUnits
         {
             Console.WriteLine("Inexperienced soldiers considered to be less reliable than other Legionnaires.");
         }
-        public double Attack()
+        public double Attack(int count)
         {
-            myTurn = Turn();
-            return attack;
+            if (count % speed == 0)
+            {
+                return attack;
+            }
+            return 0;
         }
     }
     public class Principes : Legionnaire
@@ -92,17 +97,20 @@ namespace MilitaryUnits
             Defense();
             armorLevel += g.Armor();
             attack = g.Attack();
-            speed = 1.25;
+            speed = 1;
             healthPoints = 15.0;
         }
         public override void Description()
         {
             Console.WriteLine("These were the more experienced soldiers, often better equipped than the Hastati, and having more experience on the battlefield.");
         }
-        public double Attack()
+        public double Attack(int count)
         {
-            myTurn = Turn();
-            return attack;
+            if (count % speed == 0)
+            {
+                return attack;
+            }
+            return 0;
         }
     }
     public class Triarii : Legionnaire
@@ -116,17 +124,20 @@ namespace MilitaryUnits
             Defense();
             armorLevel += g.Armor();
             attack = g.Attack();
-            speed = 1.5;
+            speed = 1;
             healthPoints = 20.0;
         }
         public override void Description()
         {
             Console.WriteLine("The veteran soldiers, to be used in battle only in extreme situations.");
         }
-        public double Attack()
+        public double Attack(int count)
         {
-            myTurn = Turn();
-            return attack;
+            if (count % speed == 0)
+            {
+                return attack;
+            }
+            return 0;
         }
     }
 }

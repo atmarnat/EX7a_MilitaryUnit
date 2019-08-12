@@ -39,8 +39,7 @@ namespace MilitaryUnitParentClasses
     {
         protected string name;
         protected double armorLevel;
-        protected double speed;
-        protected double myTurn;
+        protected int speed;
         protected double attack;
         protected double healthPoints;
 
@@ -48,10 +47,10 @@ namespace MilitaryUnitParentClasses
         {
             name = "Civilian";
             armorLevel = 0.0;
-            speed = 0.1;
-            myTurn = 0.0;
+            speed = 10;
             attack = 0.0;
-            healthPoints = 1.0;        }
+            healthPoints = 1.0;
+        }
         public bool IsDead()
         {
             if (healthPoints <= 0.0)
@@ -65,20 +64,6 @@ namespace MilitaryUnitParentClasses
         public void Name()
         {
             Console.WriteLine(name);
-        }
-        public double Turn()
-        {
-            if (myTurn <= 1)
-            {
-                myTurn += speed;
-                return myTurn;
-            }
-            else if(myTurn > 1 )
-            {
-                myTurn -= 1 + speed;
-                return myTurn;
-            }
-            return myTurn;
         }
         virtual public void Defense()
         {
@@ -94,7 +79,7 @@ namespace MilitaryUnitParentClasses
         {
             Console.WriteLine($"unit type is {name}");
             Console.WriteLine($"unit speed is {speed}");
-            Console.WriteLine($"unit turn meter is {myTurn}");
+            //Console.WriteLine($"unit turn meter is {myTurn}");
             Console.WriteLine($"unit attack power is {attack}");
             Console.WriteLine($"unit health is {healthPoints}");
             Console.WriteLine($"unit armor is {armorLevel}");

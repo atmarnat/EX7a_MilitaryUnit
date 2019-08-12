@@ -28,7 +28,7 @@ namespace MilitaryUnitWeapons
     {
         public Spear()
         {
-            power = 2.0;
+            power = 6.0;
             reach = 3.0;
         }
         public override double Attack()
@@ -44,7 +44,7 @@ namespace MilitaryUnitWeapons
 
         public Pilum()
         {
-            power = 5.0;
+            power = 20.0;
             reach = 25.0;
             count = 6;
             accuracy = 0.8;
