@@ -138,6 +138,6 @@ namespace MilitaryUnits
                 return attack;
             }
             return 0;
-        }
+        } 
     }
 }

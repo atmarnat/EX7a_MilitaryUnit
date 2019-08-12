@@ -54,7 +54,10 @@ namespace MilitaryUnitParentClasses
         public bool IsDead()
         {
             if (healthPoints <= 0.0)
+            {
+                Console.WriteLine($"{name} has died.");
                 return true;
+            }
             return false;
         }
         virtual public void Description()
@@ -69,11 +72,14 @@ namespace MilitaryUnitParentClasses
         {
             armorLevel = 0.0;
         }
-        public double Health(double damage)
+        public void Health(double damage)
         {
             double damageReduction = 1 - ((armorLevel * 10) / 2) / 100;
             healthPoints -= damage * damageReduction;
-            return healthPoints;
+        }
+        public void ViewHealth()
+        {
+            Console.WriteLine(healthPoints);
         }
         public void About()
         {

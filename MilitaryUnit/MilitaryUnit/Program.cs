@@ -8,21 +8,19 @@ namespace MilitaryUnit
         static void Main(string[] args)
         {
             Console.WriteLine("We are the Roman Legion!");
+            int count = 1;
             Velites v1 = new Velites();
-            Hastati h1 = new Hastati();
-            Principes p1 = new Principes();
             Triarii t1 = new Triarii();
 
-            h1.About();
-            Console.WriteLine();
-
-            h1.Attack(1);
-            h1.About();
-            h1.Attack(2);
-            h1.About();
-            h1.Attack(3);
-            h1.About();
-
+            while (v1.IsDead() == false && t1.IsDead() == false)
+            {
+                t1.Health(v1.Attack(count));
+                t1.ViewHealth();
+                v1.Health(t1.Attack(count));
+                v1.ViewHealth();
+                count++;
+            }
+            Console.WriteLine(count);
         }
     }
 }
