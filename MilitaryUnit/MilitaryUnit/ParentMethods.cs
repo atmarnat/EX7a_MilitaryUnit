@@ -64,9 +64,9 @@ namespace MilitaryUnitParentClasses
         {
             Console.WriteLine("A non-military unit.");
         }
-        public void Name()
+        public string Name()
         {
-            Console.WriteLine(name);
+            return name;
         }
         virtual public void Defense()
         {
@@ -77,15 +77,14 @@ namespace MilitaryUnitParentClasses
             double damageReduction = 1 - ((armorLevel * 10) / 2) / 100;
             healthPoints -= damage * damageReduction;
         }
-        public void ViewHealth()
+        public double ViewHealth()
         {
-            Console.WriteLine(healthPoints);
+            return healthPoints;
         }
         public void About()
         {
             Console.WriteLine($"unit type is {name}");
             Console.WriteLine($"unit speed is {speed}");
-            //Console.WriteLine($"unit turn meter is {myTurn}");
             Console.WriteLine($"unit attack power is {attack}");
             Console.WriteLine($"unit health is {healthPoints}");
             Console.WriteLine($"unit armor is {armorLevel}");
