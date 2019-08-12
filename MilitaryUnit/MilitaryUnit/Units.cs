@@ -17,7 +17,7 @@ namespace MilitaryUnits
             armorLevel = 5.0;
             attack = p.Attack();
             speed = 3;
-            healthPoints = 8;
+            healthPoints = 20;
         }
         public override void Description()
         {
@@ -31,7 +31,7 @@ namespace MilitaryUnits
         {
             if (count % speed == 0)
             {
-                return attack;
+                return p.Attack();
             }
             return 0;
         }
@@ -125,7 +125,7 @@ namespace MilitaryUnits
             armorLevel += g.Armor();
             attack = g.Attack();
             speed = 1;
-            healthPoints = 20.0;
+            healthPoints = 40.0;
         }
         public override void Description()
         {
