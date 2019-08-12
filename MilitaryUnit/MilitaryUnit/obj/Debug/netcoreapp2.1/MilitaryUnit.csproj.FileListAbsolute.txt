@@ -1,0 +1,11 @@
+C:\Users\wwstudent\source\repos\EX7a_MilitaryUnit\MilitaryUnit\MilitaryUnit\bin\Debug\netcoreapp2.1\MilitaryUnit.deps.json
+C:\Users\wwstudent\source\repos\EX7a_MilitaryUnit\MilitaryUnit\MilitaryUnit\bin\Debug\netcoreapp2.1\MilitaryUnit.runtimeconfig.json
+C:\Users\wwstudent\source\repos\EX7a_MilitaryUnit\MilitaryUnit\MilitaryUnit\bin\Debug\netcoreapp2.1\MilitaryUnit.runtimeconfig.dev.json
+C:\Users\wwstudent\source\repos\EX7a_MilitaryUnit\MilitaryUnit\MilitaryUnit\bin\Debug\netcoreapp2.1\MilitaryUnit.dll
+C:\Users\wwstudent\source\repos\EX7a_MilitaryUnit\MilitaryUnit\MilitaryUnit\bin\Debug\netcoreapp2.1\MilitaryUnit.pdb
+C:\Users\wwstudent\source\repos\EX7a_MilitaryUnit\MilitaryUnit\MilitaryUnit\obj\Debug\netcoreapp2.1\MilitaryUnit.csprojAssemblyReference.cache
+C:\Users\wwstudent\source\repos\EX7a_MilitaryUnit\MilitaryUnit\MilitaryUnit\obj\Debug\netcoreapp2.1\MilitaryUnit.csproj.CoreCompileInputs.cache
+C:\Users\wwstudent\source\repos\EX7a_MilitaryUnit\MilitaryUnit\MilitaryUnit\obj\Debug\netcoreapp2.1\MilitaryUnit.AssemblyInfoInputs.cache
+C:\Users\wwstudent\source\repos\EX7a_MilitaryUnit\MilitaryUnit\MilitaryUnit\obj\Debug\netcoreapp2.1\MilitaryUnit.AssemblyInfo.cs
+C:\Users\wwstudent\source\repos\EX7a_MilitaryUnit\MilitaryUnit\MilitaryUnit\obj\Debug\netcoreapp2.1\MilitaryUnit.dll
+C:\Users\wwstudent\source\repos\EX7a_MilitaryUnit\MilitaryUnit\MilitaryUnit\obj\Debug\netcoreapp2.1\MilitaryUnit.pdb
