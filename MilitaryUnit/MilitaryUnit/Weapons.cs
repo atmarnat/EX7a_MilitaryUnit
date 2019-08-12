@@ -44,7 +44,7 @@ namespace MilitaryUnitWeapons
 
         public Pilum()
         {
-            power = 20.0;
+            power = 30.0;
             reach = 25.0;
             count = 6;
             accuracy = 0.8;
@@ -56,6 +56,10 @@ namespace MilitaryUnitWeapons
             if (r.NextDouble() <= accuracy && count > 0)
             {
                 return power;
+            }
+            if(r.NextDouble() > accuracy && count > 0)
+            {
+                Console.WriteLine("You missed.");    
             }
             else if (count == 0)
             {
